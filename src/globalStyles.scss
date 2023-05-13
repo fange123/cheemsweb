@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .buy_btn {
+    position: relative;
+    font-size: 3rem;
+    overflow: hidden;
+    transition: all 0.15s ease-in;
+    &::before {
+      content: ' ';
+      display: inline-block;
+      position: absolute;
+      background: #fff;
+      width: 4rem;
+      height: 100%;
+      top: 0;
+      left: -5rem;
+      opacity: 0.3;
+      transition: all 0.25s ease-out;
+      transform: skewX(-25deg);
+    }
+    &:hover {
+      font-weight: bold;
+    }
+
+    &:hover::before {
+      width: 10rem;
+      left: 36rem;
+    }
+  }
+}
+
 @layer utilities {
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {

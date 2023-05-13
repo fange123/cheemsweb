@@ -21,32 +21,17 @@ export interface HomepageMeta {
  * Hero section
  */
 export interface Hero {
-  imageSrc: string;
+  bg: string;
+  homeImg: string;
   name: string;
-  description: JSX.Element;
-  actions: HeroActionItem[];
-}
-
-interface HeroActionItem {
-  href: string;
-  text: string;
-  primary?: boolean;
-  Icon?: ForwardRefExoticComponent<Omit<SVGProps<SVGSVGElement>, 'ref'>>;
 }
 
 /**
  * About section
  */
 export interface About {
-  profileImageSrc?: string;
-  description: string;
-  aboutItems: AboutItem[];
-}
-
-export interface AboutItem {
-  label: string;
-  text: string;
-  Icon?: ForwardRefExoticComponent<Omit<SVGProps<SVGSVGElement>, 'ref'>>;
+  aboutImageSrc?: string;
+  description: JSX.Element;
 }
 
 /**
@@ -127,7 +112,7 @@ export const ContactType = {
   Instagram: 'Instagram',
 } as const;
 
-export type ContactType = typeof ContactType[keyof typeof ContactType];
+export type ContactType = (typeof ContactType)[keyof typeof ContactType];
 
 export interface ContactItem {
   type: ContactType;
