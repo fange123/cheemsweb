@@ -17,10 +17,10 @@ const index: FC = memo(() => {
           src={heroData.bg}
         />
         <div className="relative px-4">
-          <div className="flex flex-col px-5 pt-10 lg:flex-row">
+          <div className="flex flex-col  px-5 pt-10 lg:flex-row">
             <div className=" flex-1 lg:mt-20">
-              <div className=" w-full rounded-xl lg:h-120 lg:w-120">
-                <Image alt="home-image" className="object-cover " src={heroData.homeImg} />
+              <div className="mt-44 w-56 rounded-xl lg:mt-10 lg:h-120 lg:w-120">
+                <Image alt="home-image" className="w-full " src={heroData.homeImg} />
               </div>
             </div>
             <div className="flex-1 pl-0 pt-0 lg:pl-48 lg:pt-48">
